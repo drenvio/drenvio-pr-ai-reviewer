@@ -1,0 +1,15 @@
+name: Comment PR
+description: Comment on a pull request
+inputs:
+  github-token:
+    description: 'GitHub Token'
+    required: true
+  pr-number:
+    description: 'Pull Request Number'
+    required: true
+  comment:
+    description: 'Comment message'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
