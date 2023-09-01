@@ -1,4 +1,4 @@
-name: Comment PR
+name: Code Review
 description: Comment on a pull request
 inputs:
   github-token:
