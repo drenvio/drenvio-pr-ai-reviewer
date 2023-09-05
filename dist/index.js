@@ -37,6 +37,7 @@ const github_1 = require("@actions/github");
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
+            console.log('🎈 Se esta ejecutando la función');
             const token = core.getInput('github-token', { required: true });
             const octokit = (0, github_1.getOctokit)(token);
             const prNumber = core.getInput('pr-number', { required: true });
@@ -50,6 +51,7 @@ function run() {
             console.log('Comment posted successfully!');
         }
         catch (error) {
+            console.log("Este es el error", error);
             core.setFailed(`Error: ${error.message}`);
         }
     });
